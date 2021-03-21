@@ -1,6 +1,6 @@
 {
   "name": "@postalcode/postalcode",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Search Postal Code",
   "main": "dist/index.js",
   "module": "dist/index.js",
