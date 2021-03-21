@@ -1,0 +1,17 @@
+{
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "target": "ES6",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "mocha", "chai"],
+    "noImplicitAny": true,
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": ["./src", "test"],
+  "exclude": ["node_modules"]
+}

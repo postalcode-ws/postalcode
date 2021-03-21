@@ -1,0 +1,16 @@
+.*
+test
+dist
+.gitignore
+.editorconfig
+.eslintrc
+.github
+package-lock.json
+README.md
+tsconfig.json
+example
+.nyrc
+.nyc_output
+.vscode
+yarn.lock
+rollup.config.js
