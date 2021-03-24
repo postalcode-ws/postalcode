@@ -1,6 +1,5 @@
 .*
 test
-dist
 .gitignore
 .editorconfig
 .eslintrc

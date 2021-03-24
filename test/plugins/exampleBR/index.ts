@@ -1,4 +1,4 @@
-import { InitOptions, POSTALCODE, ServiceModule } from "../../../src/interface";
+import { InitOptions, POSTALCODE, ServiceModule } from "../../../src";
 import { ServiceError } from "./errors/ServiceError";
 import { defaults } from "./utils";
 

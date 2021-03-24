@@ -5,6 +5,7 @@
   <a href='https://coveralls.io/github/postalcode-ws/postalcode'><img src='https://coveralls.io/repos/github/postalcode-ws/postalcode/badge.svg' alt='Coverage Status' height="20" />
   </a>
   <a href="https://badge.fury.io/js/%40postalcode%2Fpostalcode"><img src="https://badge.fury.io/js/%40postalcode%2Fpostalcode.svg" alt="npm version" height="20"></a>
+  <a href="https://codeclimate.com/github/postalcode-ws/postalcode/maintainability"><img src="https://api.codeclimate.com/v1/badges/dd28076593486280ea27/maintainability" /></a>
   <a href="https://snyk.io/test/github/postalcode-ws/postalcode"><img src="https://snyk.io/test/github/postalcode-ws/postalcode/badge.svg" data-canonical-src="https://snyk.io/test/github/postalcode-ws/postalcode" alt="Known Vulnerabilities" height="20"></a>
   <a href="https://github.com/postalcode-ws/postalcode/actions/workflows/integration.yml"><img src="https://github.com/postalcode-ws/postalcode/actions/workflows/integration.yml/badge.svg?branch=master" alt="Workflow status badge" loading="lazy" height="20"></a>
   <a href="https://github.com/postalcode-ws/postalcode/actions/workflows/publish.yml"><img src="https://github.com/postalcode-ws/postalcode/actions/workflows/publish.yml/badge.svg?branch=master" alt="Workflow status badge" loading="lazy" height="20"></a>
@@ -65,6 +66,28 @@ viaCep.get("05010000").then(console.log);
 //   "street":  "Rua Caiubí",
 //   "neighborhood":  "Perdizes",
 // }
+```
+
+#### Browser using CDN
+
+```html
+<script src="https://unpkg.com/@postalcode/service-viacep@latest/dist/index.min.js"></script>
+
+<script>
+  const viaCep = new serviceViacep({
+    /* Service configs*/
+  });
+
+  viaCep.get("05010000").then(console.log);
+
+  // {
+  //   "postalcode":  "05010000",
+  //   "state":  "SP",
+  //   "city":  "São Paulo",
+  //   "street":  "Rua Caiubí",
+  //   "neighborhood":  "Perdizes",
+  // }
+</script>
 ```
 
 ## how to contribute

@@ -1,6 +1,6 @@
 import { expect, use } from "chai";
 import * as chaiSubset from "chai-subset";
-import { POSTALCODE, PostalCode } from "../src";
+import PostalCode, { POSTALCODE } from "../src";
 import PostalCodeError from "../src/utils/errors/PostalCodeError";
 import ExampleBR, { ServiceOptions } from "./plugins/exampleBR";
 import ExampleUS from "./plugins/exampleUS";

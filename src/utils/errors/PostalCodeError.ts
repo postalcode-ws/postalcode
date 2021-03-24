@@ -1,4 +1,4 @@
-import { ServiceError } from "../../interface";
+import { ServiceError } from "../../";
 
 export interface PostalCodeError {
   message: string;
