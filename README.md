@@ -29,7 +29,7 @@ Instructions on how to use them in your own application are linked below.
 #### Browser using CDN
 
 ```
-<script src="https://unpkg.com/@postalcode/postalcode@latest/dist/index-browser.min.js"></script>
+<script src="https://unpkg.com/@postalcode/postalcode@latest/dist/index.min.js"></script>
 ```
 
 #### npm
@@ -60,7 +60,7 @@ postCode.use<ServiceOptions>(ViaCepService, {
 viaCep.get("05010000").then(console.log);
 
 // {
-//   "cep":  "05010000",
+//   "postalcode":  "05010000",
 //   "state":  "SP",
 //   "city":  "São Paulo",
 //   "street":  "Rua Caiubí",
@@ -68,17 +68,24 @@ viaCep.get("05010000").then(console.log);
 // }
 ```
 
-#### Browser using CDN
+#### Browser using CDN and plugins CDN
 
 ```html
+<script src="https://unpkg.com/@postalcode/postalcode@latest/dist/index.min.js"></script>
 <script src="https://unpkg.com/@postalcode/service-viacep@latest/dist/index.min.js"></script>
 
 <script>
-  const viaCep = new serviceViacep({
+  const postal = new postalcode({
+    /* PostalCode configs*/
+  });
+
+  postal.use(serviceViacep, {
     /* Service configs*/
   });
 
-  viaCep.get("05010000").then(console.log);
+  //postal.use(otherService) accept multiple service
+
+  postal.get("05010000").then(console.log);
 
   // {
   //   "postalcode":  "05010000",
@@ -88,6 +95,26 @@ viaCep.get("05010000").then(console.log);
   //   "neighborhood":  "Perdizes",
   // }
 </script>
+```
+
+### PostalCode Options
+
+```js
+{
+  //Filter plugins by country;
+  //default: get all postal code in all country plugins inputted in .use()
+  //ex: country:"BR" -> get postal code in "BR" country plugins inputted in .use()
+  //@type: string
+  country: "*",
+  //Postal Code length
+  //default: is 0, it captur automatic in plugins inserted in .use()
+  //@type: number
+  postalCodeSize:0,
+  //Set All plugins timeout.
+  //default: is 30s in milliseconds
+  //@type: number
+  timeout: 30000
+}
 ```
 
 ## how to contribute
