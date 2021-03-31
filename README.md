@@ -57,7 +57,7 @@ postCode.use<ServiceOptions>(ViaCepService, {
   /* All Service Options*/
 });
 
-viaCep.get("05010000").then(console.log);
+postCode.get("05010000").then(console.log);
 
 // {
 //   "postalcode":  "05010000",
